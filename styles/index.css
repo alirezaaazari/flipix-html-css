@@ -1,0 +1,169 @@
+/* header{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+   
+} */
+
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.headerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoAndMenuContainer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.logoFlipix img{
+    width: 3rem;
+    height: 2rem;
+}
+
+.logoSvg{
+    width: 2rem !important; 
+}
+
+.hambergurMenuContainer img{
+    width:2rem ;
+}
+
+.NavContainer{
+    margin-top: 1rem;
+    margin-right: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+.mainContainer{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: black;
+    height: 50rem;
+}
+
+
+h3{
+    color: greenyellow;
+    text-align: center;
+    padding-top: 3rem;
+    font-family: sans-serif;
+}
+
+.mainContainer p{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1rem;
+    font-family: sans-serif;
+}
+
+.textContainer p{
+    font-size: 1rem;
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.buttonOne{
+    background-color: greenyellow;
+    width: 9rem;
+    height: 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 10rem;
+}
+
+
+.buttonTwo img{
+    width: 2.5rem;
+}
+
+
+.buttonTwo{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dronesContainer img{
+    display: flex;
+    margin: auto;
+    margin-top: 4rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.mainContainer{
+    background-image: url(../imgs/Accent\ element.svg);
+    background-position: right ;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.headerLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 3rem;
+    display: none;
+}
+
+
+.headerLinks a{
+    color: black;
+    text-decoration: none;
+    padding-bottom: .5rem;
+}
+
+
+.homeLink{
+   color: #000; 
+   position: relative;
+}
+
+.homeLink::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 110%;
+    height: 2px;
+    background: linear-gradient( to right,rgb(56, 56, 126),rgb(44, 202, 44));
+}
+
+
+@media (min-width:1024px) {
+    .headerLinks{
+        display: flex;
+    }
+}
+
+@media (min-width:1024px) {
+    .mainContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+}
