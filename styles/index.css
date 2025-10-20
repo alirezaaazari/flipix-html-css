@@ -1,107 +1,163 @@
-/* header{
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-   
-} */
-
-
 body{
     margin: 0;
     font-family: sans-serif;
+    background-color: #f8fafc;
+}
+
+
+header{
+    max-width: 1280px;
+    width: 100%;
+    height: 80px;
+    margin: auto;
+    border-bottom:1px solid #CBD5E1;
 }
 
 .headerContainer{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-between;
 }
 
 .logoAndMenuContainer{
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-left: 2rem;
     margin-top: 1rem;
 }
 
-.logoFlipix img{
-    width: 3rem;
-    height: 2rem;
-}
+
 
 .logoSvg{
-    width: 2rem !important; 
+    width: 4rem !important; 
 }
 
 .hambergurMenuContainer img{
     width:2rem ;
+    display: none;
 }
 
-.NavContainer{
+.navContainer{
     margin-top: 1rem;
     margin-right: 2rem;
     display: flex;
-    gap: 1rem;
+    gap: 45px;
+    align-items: center;
+}
+
+.headerLinks{
+    display: none;
+    align-items: center;
+    
+}
+
+.headerLinks a{
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    padding-bottom: .5rem;
+    margin-inline: 1rem;
+}
+
+.homeLink {
+    position: relative;
+}
+
+.homeLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgb(56, 56, 126), rgb(44, 202, 44));
 }
 
 
 
 .mainContainer{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: black;
-    height: 50rem;
+    border-radius: 24px;
+    width: 1380px;
+    height: 595px;
+    margin:  auto;
+    padding: 0 4rem;
+    background-image: url(../imgs/Accent\ element.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0 2rem;
+    margin-top: 25px;
 }
 
-
-h3{
-    color: greenyellow;
-    text-align: center;
-    padding-top: 3rem;
-    font-family: sans-serif;
+.textSide {
+    max-width: 50%;
 }
 
-.mainContainer p{
-    color: white;
-    font-size: 2rem;
-    text-align: center;
-    line-height: 1rem;
-    font-family: sans-serif;
-}
-
-.textContainer p{
+h3 {
+    color: #77B526;
     font-size: 1rem;
+    letter-spacing: 0%;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 3rem;
+    font-weight:550;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    color: #d1d5db;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
 
 .buttons{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-
-.buttonOne{
-    background-color: greenyellow;
-    width: 9rem;
-    height: 2rem;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    border-radius: 10rem;
-}
-
-
-.buttonTwo img{
-    width: 2.5rem;
-}
-
-
-.buttonTwo{
-    color: white;
-    display: flex;
-    align-items: center;
     gap: 1rem;
+    width: 100%;
+    height: 48px;
+}
+
+
+.buttonOne {
+    background-color: #99E830;
+    padding: 0 1.8rem;
+    border-radius: 99999px;
+    font-weight: 600;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #0F172A;
+}
+
+
+.buttonTwo .playIcon{
+    background: #0F172A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.buttonTwo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
 }
 
 .dronesContainer img{
@@ -112,13 +168,6 @@ h3{
     height: auto;
 }
 
-.mainContainer{
-    background-image: url(../imgs/Accent\ element.svg);
-    background-position: right ;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
 
 .headerLinks{
     display: flex;
@@ -126,7 +175,7 @@ h3{
     justify-content: center;
     margin-top: 1rem;
     gap: 3rem;
-    display: none;
+    
 }
 
 
@@ -153,17 +202,96 @@ h3{
 }
 
 
-@media (min-width:1024px) {
-    .headerLinks{
-        display: flex;
+
+@media (max-width: 768px) {
+    header {
+        height: 64px;
+        padding: 0 1rem;
+    }
+
+    .headerContainer {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+   
+    .hambergurMenuContainer img {
+        display: block;
+        width: 1.5rem;
+    }
+
+  
+    .headerLinks {
+        display: none !important;
+    }
+
+    
+    .navContainer {
+        margin: 0;
+        gap: 1rem;
+    }
+
+
+    .favourite,
+    .user {
+        display: none !important;
+    }
+
+   
+    .mainContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        padding: 2rem 1rem;
+        background-size: cover;
+    }
+
+    .textSide {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+    }
+
+
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .buttonOne,
+    .buttonTwo {
+        border-radius: 9999px;
+        font-size: 0.9rem;
+    }
+
+   
+    .dronesContainer img {
+        margin-top: 2rem;
+        max-width: 80%;
+        height: auto;
     }
 }
 
-@media (min-width:1024px) {
-    .mainContainer{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 2rem;
-    }
+    .logoSvg{
+        width: 3rem !important;
 }
